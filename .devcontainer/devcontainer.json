@@ -1,0 +1,13 @@
+{
+    "postCreateCommand": [
+        "curl https://raw.githubusercontent.com/tristanisham/zvm/master/install.sh | bash",
+        "zvm i master"
+    ],
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ziglang.vscode-zig"
+            ]
+        }
+    }
+}
