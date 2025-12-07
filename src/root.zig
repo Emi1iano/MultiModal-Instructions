@@ -318,7 +318,7 @@ fn cin(alloc: std.mem.Allocator) []const u8 {
     defer writer.deinit();
 
     if(input.streamDelimiter(&writer.writer, '\n')) |value| {
-        return alloc.dupe(u8, writer.written()[0..value-1]) catch "";
+        return alloc.dupe(u8, writer.written()[0..value]) catch "";
     } else |_| {
         return ""; 
     }
